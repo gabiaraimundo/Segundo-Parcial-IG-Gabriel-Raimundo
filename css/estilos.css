@@ -92,25 +92,6 @@ nav ul li a em.menu {
 }
 
 
-/* Estilos footer */
-.footer {
-    background-color: rgba(211, 211, 211, 0.75);
-    
-    /* Copiamos las dimensiones exactas de tu header */
-    width: 80%;           
-    max-width: 1200px;    
-    margin: auto auto 25px auto; 
-
-    /* Los mismos paddings exactos del header para que las puntas coincidan */
-    padding: 15px 0;      
-    padding-left: 80px;  
-    padding-right: 80px; 
-    
-    /* Esta línea es clave: obliga al navegador a calcular el ancho 
-       incluyendo los paddings para que no se desalinee */
-    box-sizing: border-box; 
-}
-
 
 /* seccion Hero, box centrado, imagen de fondo y titulos centrados */
 .hero {
@@ -174,6 +155,27 @@ nav ul li a em.menu {
     margin: 0px;
 
 }
+
+/* Estilos footer */
+.footer {
+    background-color: rgba(211, 211, 211, 0.75);
+    
+    /* Copiamos las dimensiones exactas de tu header */
+    width: 80%;           
+    max-width: 1200px;    
+    margin: auto auto 25px auto; 
+
+    /* Los mismos paddings exactos del header para que las puntas coincidan */
+    padding: 15px 0;      
+    padding-left: 80px;  
+    padding-right: 80px; 
+    
+    /* Esta línea es clave: obliga al navegador a calcular el ancho 
+       incluyendo los paddings para que no se desalinee */
+    box-sizing: border-box; 
+}
+
+
 
 /* Estilo para "Rafael Lozano-Hemmer" (Izquierda) */
 .footer h6 {
