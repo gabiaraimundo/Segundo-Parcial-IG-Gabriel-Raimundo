@@ -13,6 +13,17 @@ body {
     flex-direction: column;
 }
 
+
+/* Aplicamos Barlow a los títulos */
+h1, h2 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
 header {
     background-color: rgba(211, 211, 211, 0.75);
     display: flex;
@@ -72,10 +83,129 @@ nav ul li a {
     text-decoration: none;     
     color: #333;
     font-weight: 400;
-    font-size: 1 rem;
+    font-size: 1rem;
 
 }
 
 nav ul li a em.menu {
     font-style: normal; 
+}
+
+
+/* Estilos footer */
+.footer {
+    background-color: rgba(211, 211, 211, 0.75);
+    
+    /* Copiamos las dimensiones exactas de tu header */
+    width: 80%;           
+    max-width: 1200px;    
+    margin: auto auto 25px auto; 
+
+    /* Los mismos paddings exactos del header para que las puntas coincidan */
+    padding: 15px 0;      
+    padding-left: 80px;  
+    padding-right: 80px; 
+    
+    /* Esta línea es clave: obliga al navegador a calcular el ancho 
+       incluyendo los paddings para que no se desalinee */
+    box-sizing: border-box; 
+}
+
+
+/* seccion Hero, box centrado, imagen de fondo y titulos centrados */
+.hero {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../img/lozano-hemmer.jpg");
+    
+    
+    /* Ajustes para que la foto no se rompa ni se repita */
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    
+    /* Dimensiones alineadas con tu header */
+    width: 80%;                   
+    max-width: 1200px;
+    margin: 40px auto 40px auto;     /* 40px de espacio abajo del header */
+    min-height: 500px;            /* Alto para que luzca la imagen */
+    
+    /* Flexbox para centrar H1 y H2 horizontal y verticalmente */
+    display: flex;
+    flex-direction: column;       /* Uno abajo del otro */
+    justify-content: center;      /* Centrado vertical */
+    align-items: center;          /* Centrado horizontal */
+    
+    padding: 40px;
+    box-sizing: border-box;       
+    text-align: center;           /* Alinea las líneas de texto al medio */
+}
+
+/* Estilos de los textos internos del Hero para que contrasten */
+.hero h1 {
+    color: white;                 
+    font-size: 2.5rem;
+    margin-bottom: 20px;          
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+}
+
+.hero h2 {
+    color: #e3e4e5;               
+    font-size: 1.4rem;
+    font-style: italic;           
+    margin: 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* La lista interna que distribuye tus 3 datos */
+.footer ul {
+    display: flex;             
+    list-style: none;          
+    margin: 0;
+    padding: 0;
+    
+    /* Tira el nombre a la izquierda, el parcial al centro y el mail a la derecha */
+    justify-content: space-between; 
+    align-items: center; /* Centrado vertical */
+}
+
+/* Limpieza de márgenes heredados */
+.footer ul li h6,
+.footer ul li p {
+    margin: 0px;
+
+}
+
+/* Estilo para "Rafael Lozano-Hemmer" (Izquierda) */
+.footer h6 {
+    font-family: "Merriweather", sans-serif; 
+    color: black;
+    font-size: 1.2rem; 
+    font-weight: 400;
+}
+
+/* Estilo para "Segundo Parcial I.G" (Centro) */
+.footer p {
+    font-family: "Merriweather", sans-serif;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Estilo para el Mail de Contacto (Derecha) */
+.footer address {
+    font-style: normal; /* Quita la cursiva de la etiqueta address */
+}
+
+.footer address a {
+    font-family: "Merriweather", sans-serif;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover para tu link de mail */
+.footer address a:hover {
+    color: #ff3b30;
+    text-decoration: underline;
 }
