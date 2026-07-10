@@ -1,0 +1,81 @@
+body {
+    background-image: url('../img/fondo.png'); 
+} 
+
+#contenedor {
+    background-color: rgba(227, 228, 229, 0.90); 
+    min-height: 100vh;         
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(211, 211, 211, 0.75);
+    display: flex;
+    align-items: center;
+    width: 80%;           
+    max-width: 1200px;    
+    margin: 0 auto;
+
+    padding: 15px 0;      
+    padding-left: 80px;  
+    padding-right: 80px; 
+}
+
+header h6 {
+    margin: 0;
+}
+
+header h6 a {
+    font-family: "Merriweather", sans-serif; 
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem; 
+}
+
+header h6 a em {
+    font-style: italic; 
+}
+
+
+/*Navegador */
+nav {
+    margin-left: auto; 
+}
+
+nav ul {
+    display: flex;             
+    list-style: none;          
+    margin: 0;
+    padding: 0;
+    gap: 40px;                 
+}
+
+nav ul li a:hover em.menu {
+    color: #ff3b30;          /* Cambia el texto a un color rojo/destacado (podés usar el que quieras) */
+    text-decoration: underline; /* Le agrega un subrayado sutil al pasar el mouse */
+    transition: color 0.3s ease; /* Hace que el cambio de color sea suave y no un golpe seco */
+}
+
+/* Agregamos la transición también al estado normal para que cuando saques el mouse vuelva suave */
+nav ul li a em.menu {
+    font-style: normal; 
+    transition: color 0.3s ease; 
+}
+
+nav ul li a {
+    font-family: "Merriweather", sans-serif; 
+    text-decoration: none;     
+    color: #333;
+    font-weight: 400;
+    font-size: 1 rem;
+
+}
+
+nav ul li a em.menu {
+    font-style: normal; 
+}
