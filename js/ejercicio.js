@@ -40,8 +40,8 @@ btnConfirmar.addEventListener('click', function(e) {
     }
 
     // Si pasó todas las pruebas, avanzamos al siguiente formulario
-    formInicial.style.display = 'none';
-    formObras.style.display = 'block';
+    formInicial.className = 'oculto';
+    formObras.className = 'mostrar';
     spanNumObraActual.innerText = datosObras.length + 1;
 });
 
@@ -95,8 +95,8 @@ function ingresarObra() {
 
     // Verificamos si terminamos de cargar la cantidad que el usuario pidió al principio
     if (datosObras.length == cantObrasTotal) {
-        formObras.style.display = 'none';
-        divResultados.style.display = 'block';
+        formObras.className = 'oculto';
+        divResultados.className = 'mostrar-resultados';
         mostrarResultadosCalculados();
     } else {
         // Si faltan, cambiamos el número en el título del formulario (ej: Obra 2)
@@ -113,7 +113,7 @@ function mostrarResultadosCalculados() {
     // Tomamos la primera obra del array como base para calcular el máximo de horas
     let obraMayorTiempo = datosObras[0];
 
-    // Ciclo FOR 
+    // Ciclo FOR tradicional de la cátedra
     for (let i = 0; i < datosObras.length; i++) {
         // Operación: luces * horas * consumo unitario
         let consumoDeEstaObra = datosObras[i].luces * datosObras[i].horas * consumoPorHoraLuz;
@@ -155,6 +155,6 @@ function reiniciarTodo() {
     document.querySelector('#costokWh').value = '';
 
     // Volvemos visualmente al estado inicial
-    divResultados.style.display = 'none';
-    formInicial.style.display = 'block';
+    divResultados.className = 'oculto';
+    formInicial.className = 'mostrar';
 }

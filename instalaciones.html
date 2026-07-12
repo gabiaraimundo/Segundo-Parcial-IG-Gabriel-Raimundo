@@ -25,7 +25,7 @@
 
 	    
 
-		<main main class="contenedor-control">
+		<main class="contenedor-control">
 
 			<div class="instrucciones-sistema">
 		    <h3>Instrucciones de uso</h3>
@@ -36,7 +36,7 @@
 		        <li><strong>Paso 3:</strong> Una vez finalizada la carga, el sistema calculará automáticamente el consumo total y promedio, la obra con mayor tiempo de uso con su costo diario, y el porcentaje de obras con más de 20 luces móviles.</li>
 		    </ul>
 		</div>
-			
+
 			<h2> Control de Funcionamiento de Luces</h2>
 			
 			<section>
@@ -54,7 +54,7 @@
 				    <button id="btnConfirmar">Confirmar Configuración</button>
 				</form>
 
-				<form id="formObras" style="display: none;">
+				<form id="formObras" class="oculto">
 				    <h3>Carga de Datos de las Obras (<span id="numObraActual">1</span>)</h3>
 				    <label>Nombre de la obra:</label>
 				    <input type="text" id="nombreObra"><br><br>
@@ -68,14 +68,14 @@
 				    <button id="btnIngresarObra">Ingresar Obra</button>
 				</form>
 
-				<div id="resultados" style="display: none; font-family: 'Merriweather', serif; line-height: 1.8;">
-					<h3>Resultados del Análisis</h3>
-					<p id="resultadoConsumo"></p>
-					<p id="resultadoMayorTiempo"></p>
-					<p id="resultadoPorcentaje"></p>
-					<br>
-					<button id="btnReiniciar" style="background-color: #ff3b30; color: white; border: none; padding: 10px 20px; font-family: 'Barlow', sans-serif; font-weight: bold; cursor: pointer; border-radius: 4px;">Reiniciar Sistema</button>
-				</div>
+				<div id="resultados" class="oculto">
+				    <h3>Resultados del Análisis</h3>
+				    <p id="resultadoConsumo"></p>
+				    <p id="resultadoMayorTiempo"></p>
+				    <p id="resultadoPorcentaje"></p>
+				    <br>
+				    <button id="btnReiniciar">Reiniciar Sistema</button>
+</div>
 			</section>
 		</main>
 

@@ -487,6 +487,53 @@ nav ul li a em.menu {
     margin-bottom: 0;
 }
 
+/* --- Bloque de Resultados General --- */
+#resultados {
+    font-family: 'Merriweather', serif;
+    line-height: 1.8;
+}
+
+/* --- Título interno de los resultados --- */
+#resultados h3 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff3b30; /* Línea roja divisoria */
+    padding-bottom: 10px;
+}
+
+/* --- El Botón de Reiniciar Sistema --- */
+#btnReiniciar {
+    background-color: #ff3b30; /* Rojo distintivo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+    cursor: pointer; /* Cambia a la manito interactiva */
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#btnReiniciar:hover {
+    background-color: #cc2f26; /* Se oscurece un toque al pasar el mouse */
+}
+
+/* --- Clases de control de visibilidad para JavaScript --- */
+.oculto {
+    display: none !important;
+}
+
+.mostrar {
+    display: block !important;
+}
+
+.mostrar-resultados {
+    display: block !important;
+}
+
 /* Estilo para "Rafael Lozano-Hemmer" (Izquierda) */
 .footer h6 {
     font-family: "Merriweather", sans-serif; 
