@@ -189,6 +189,76 @@ nav ul li a em.menu {
     margin-bottom: 0;
 }
 
+
+/* --- Contenedor de la Sección Obras --- */
+.obras {
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    box-sizing: border-box;
+}
+
+.obras h3 {
+    font-family: "Barlow", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+/* --- La lista que se convierte en Grilla Flexbox --- */
+.obras ul {
+    display: flex;
+    flex-wrap: wrap; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px; /* Espacio uniforme entre tarjetas */
+}
+
+/* --- Cada Tarjeta (Card) --- */
+.obras ul li {
+    /* Queremos 3 columnas, por lo que usamos calc(). 
+       Restamos el espacio que ocupan los 'gaps' intermedios para que sea exacto. */
+    width: calc((100% - 60px) / 3); 
+    
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    overflow: hidden; 
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover interactivo para las tarjetas */
+.obras ul li:hover {
+    transform: translateY(-5px); 
+}
+
+/* --- Contenedor de la Imagen --- */
+.imagen-obra {
+    width: 100%;
+    height: 200px; /* Fijamos un alto para que todas las fotos midan igual */
+    overflow: hidden;
+}
+
+.imagen-obra img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* --- Títulos de las Obras (H4) --- */
+.obras ul li h4 {
+    font-family: "Barlow", sans-serif; 
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 20px 15px; 
+}
+
 /* La lista interna que distribuye tus 3 datos */
 .footer ul {
     display: flex;             
@@ -227,6 +297,54 @@ nav ul li a em.menu {
     box-sizing: border-box; 
 }
 
+
+/* --- Contenedor Padre #conceptos --- */
+#conceptos {
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    
+    display: flex;       /* Activamos Flexbox horizontal */
+    flex-direction: row; 
+    gap: 40px;           /* Separación entre las dos columnas principales */
+}
+
+/* --- Columna Izquierda (Ancha: tiene 2 articles) --- */
+.columna-ancha {
+    flex: 2;            /* Ocupa 2 partes del espacio (aprox 66%) */
+    display: flex;
+    flex-direction: column; /* Apila sus 2 articles uno abajo del otro */
+    gap: 30px;          /* Separación entre el primer y segundo artículo */
+}
+
+/* --- Columna Derecha (Angosta: tiene 1 article) --- */
+.columna-angosta {
+    flex: 1;            /* Ocupa 1 parte del espacio (aprox 33%) */
+}
+
+/* --- Estilos visuales para los articles (manteniendo tu estética) --- */
+#conceptos article {
+    background-color: rgba(255, 255, 255, 0.60);
+    padding: 25px;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#conceptos h3 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#conceptos p {
+    font-family: "Merriweather", serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+}
 
 
 /* Estilo para "Rafael Lozano-Hemmer" (Izquierda) */
