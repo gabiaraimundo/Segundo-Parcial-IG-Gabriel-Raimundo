@@ -24,11 +24,9 @@ function mostrarDatoAlAzar() {
     // Obtenemos el dato usando ese índice
     const datoSeleccionado = datosCuriosos[indiceAleatorio];
     
-    // OPCIÓN A: Mostrarlo adentro de la página (La más estética y recomendada)
+    // Mostrarlo adentro de la página 
     parrafo.textContent = datoSeleccionado;
     
-    // OPCIÓN B: Si preferís el popup nativo del navegador, descomentá la línea de abajo:
-    // alert(datoSeleccionado);
 }
 
 // 4. Escuchamos el evento 'click' en el botón para ejecutar la función
