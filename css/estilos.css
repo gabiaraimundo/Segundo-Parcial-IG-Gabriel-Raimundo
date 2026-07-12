@@ -137,6 +137,58 @@ nav ul li a em.menu {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
+
+/* --- Sección Principal (Contenedor de las 3 columnas) --- */
+.principal {
+    /* 1. Dimensiones alineadas con header y hero */
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto 40px auto; /* Centrado y con margen abajo antes del footer */
+    box-sizing: border-box;
+
+    /* 2. Activamos Flexbox horizontal */
+    display: flex;
+    flex-direction: row; /* Los artículos se ponen uno al lado del otro */
+    
+    /* 3. Espacio de separación idéntico entre cada columna */
+    gap: 30px; 
+}
+
+/* --- Estilos para cada uno de los 3 Articles --- */
+.principal article {
+    /* flex: 1 obliga a los 3 a repartirse el ancho por igual (33.33% cada uno) */
+    flex: 1; 
+    
+    /* Estilos visuales sutiles para que el texto sea facil de leer */
+    background-color: rgba(255, 255, 255, 0.60); 
+    padding: 25px;
+    border-radius: 6px; /* Bordes un toque redondeados */
+    box-sizing: border-box;
+}
+
+/* --- Ajuste de tipografías --- */
+.principal article h3 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.principal article p {
+    font-family: "Merriweather", serif; 
+    font-size: 0.95rem;
+    line-height: 1.6; 
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* Quitamos el margen al último párrafo de cada columna para evitar desparrames visuales */
+.principal article p:last-child {
+    margin-bottom: 0;
+}
+
 /* La lista interna que distribuye tus 3 datos */
 .footer ul {
     display: flex;             
