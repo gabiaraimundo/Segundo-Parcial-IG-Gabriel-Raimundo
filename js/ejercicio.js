@@ -113,7 +113,7 @@ function mostrarResultadosCalculados() {
     // Tomamos la primera obra del array como base para calcular el máximo de horas
     let obraMayorTiempo = datosObras[0];
 
-    // Ciclo FOR tradicional de la cátedra
+    // Ciclo FOR 
     for (let i = 0; i < datosObras.length; i++) {
         // Operación: luces * horas * consumo unitario
         let consumoDeEstaObra = datosObras[i].luces * datosObras[i].horas * consumoPorHoraLuz;
@@ -135,7 +135,7 @@ function mostrarResultadosCalculados() {
     let costoDiarioMayorObra = (obraMayorTiempo.luces * obraMayorTiempo.horas * consumoPorHoraLuz) * costoPorkWh;
     let porcentajeObrasMas20Luces = (obrasConMasDe20Luces / cantObrasTotal) * 100;
 
-    // Pintamos los resultados usando .toFixed(2) para que los decimales queden prolijos
+    // Acotamos los resultados usando .toFixed(2) para que los decimales queden prolijos
     document.querySelector('#resultadoConsumo').innerText = `1. Consumo diario total del sistema: ${consumoDiarioTotal.toFixed(2)} kWh. El consumo promedio diario por obra es de ${consumoPromedioPorObra.toFixed(2)} kWh.`;
     document.querySelector('#resultadoMayorTiempo').innerText = `2. La obra con mayor tiempo de funcionamiento activo es "${obraMayorTiempo.nombre}" (${obraMayorTiempo.horas} hs/día), generando un costo de electricidad diario de $${costoDiarioMayorObra.toFixed(2)}.`;
     document.querySelector('#resultadoPorcentaje').innerText = `3. El porcentaje de obras que requieren de más de 20 luces móviles es del ${porcentajeObrasMas20Luces.toFixed(2)}%.`;
