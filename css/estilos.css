@@ -298,6 +298,61 @@ nav ul li a em.menu {
 }
 
 
+/* --- Contenedor Principal de la Página de Control --- */
+.contenedor-control {
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.85); /* Fondito blanco semitransparente */
+    padding: 30px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* --- Título Principal del Ejercicio --- */
+.contenedor-control h2 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+/* --- Opcional: Estilo prolijo para los formularios internos --- */
+.contenedor-control form {
+    font-family: 'Merriweather', serif; /* Fuente de lectura para los labels */
+    color: #333;
+}
+
+.contenedor-control form h3 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff3b30; /* Una línea roja sutil para separar secciones */
+    padding-bottom: 10px;
+}
+
+/* Estilo base para los botones de los formularios */
+.contenedor-control button {
+    font-family: 'Barlow', sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contenedor-control button:hover {
+    background-color: #ff3b30; /* Cambia al rojo interactivo al pasar el mouse */
+}
+
+
 /* --- Contenedor Padre #conceptos --- */
 #conceptos {
     width: 80%;
@@ -387,6 +442,50 @@ nav ul li a em.menu {
     background-color: #ff3b30; /* El rojo que usaste en el menú */
 }
 
+
+/* --- Caja de Instrucciones --- */
+.instrucciones-sistema {
+    background-color: rgba(26, 26, 26, 0.05); /* Un gris ultra sutil para diferenciarlo */
+    border-left: 4px solid #ff3b30; /* Línea roja de acento a la izquierda para guiar el ojo */
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px; /* Separación con el formulario de abajo */
+}
+
+.instrucciones-sistema h3 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    border: none !important; /* Evita que herede la línea roja inferior de los formularios */
+    padding: 0 !important;
+}
+
+.instrucciones-sistema p {
+    font-family: 'Merriweather', serif;
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.instrucciones-sistema ul {
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
+    color: #444;
+    padding-left: 20px; /* Espacio para las viñetas */
+    margin: 0;
+}
+
+.instrucciones-sistema ul li {
+    margin-bottom: 8px; /* Espacio entre ítems */
+    line-height: 1.5;
+}
+
+.instrucciones-sistema ul li:last-child {
+    margin-bottom: 0;
+}
 
 /* Estilo para "Rafael Lozano-Hemmer" (Izquierda) */
 .footer h6 {

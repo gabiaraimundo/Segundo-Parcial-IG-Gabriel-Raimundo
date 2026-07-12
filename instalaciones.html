@@ -23,7 +23,61 @@
                 </nav>
         </header>
 
-		
+	    
+
+		<main main class="contenedor-control">
+
+			<div class="instrucciones-sistema">
+		    <h3>Instrucciones de uso</h3>
+		    <p>Siga estos tres pasos para realizar el análisis de consumo eléctrico del sistema:</p>
+		    <ul>
+		        <li><strong>Paso 1:</strong> Ingrese la cantidad total de obras a evaluar, junto con el consumo por hora de las luces y el costo general de la electricidad. Luego, haga clic en <em>"Confirmar Configuración"</em>.</li>
+		        <li><strong>Paso 2:</strong> Complete los datos específicos de cada obra (Nombre, cantidad de luces y horas activas por día) uno por uno presionando <em>"Ingresar Obra"</em>.</li>
+		        <li><strong>Paso 3:</strong> Una vez finalizada la carga, el sistema calculará automáticamente el consumo total y promedio, la obra con mayor tiempo de uso con su costo diario, y el porcentaje de obras con más de 20 luces móviles.</li>
+		    </ul>
+		</div>
+			
+			<h2> Control de Funcionamiento de Luces</h2>
+			
+			<section>
+				<form id="formInicial">
+				    <h3>Configuración Inicial</h3>
+				    <label>Cantidad de obras a desarrollar:</label>
+				    <input type="number" id="cantObras" min="1"><br><br>
+				    
+				    <label>Consumo por hora de cada luz (kWh):</label>
+				    <input type="number" step="0.01" id="consumoHora" min="0.01"><br><br>
+				    
+				    <label>Costo por kWh ($):</label>
+				    <input type="number" step="0.01" id="costokWh" min="0.01"><br><br>
+				    
+				    <button id="btnConfirmar">Confirmar Configuración</button>
+				</form>
+
+				<form id="formObras" style="display: none;">
+				    <h3>Carga de Datos de las Obras (<span id="numObraActual">1</span>)</h3>
+				    <label>Nombre de la obra:</label>
+				    <input type="text" id="nombreObra"><br><br>
+				    
+				    <label>Cantidad de luces móviles:</label>
+				    <input type="number" id="lucesObra" min="1"><br><br>
+				    
+				    <label>Tiempo de funcionamiento por día (horas):</label>
+				    <input type="number" id="horasObra" min="1" max="24"><br><br>
+				    
+				    <button id="btnIngresarObra">Ingresar Obra</button>
+				</form>
+
+				<div id="resultados" style="display: none; font-family: 'Merriweather', serif; line-height: 1.8;">
+					<h3>Resultados del Análisis</h3>
+					<p id="resultadoConsumo"></p>
+					<p id="resultadoMayorTiempo"></p>
+					<p id="resultadoPorcentaje"></p>
+					<br>
+					<button id="btnReiniciar" style="background-color: #ff3b30; color: white; border: none; padding: 10px 20px; font-family: 'Barlow', sans-serif; font-weight: bold; cursor: pointer; border-radius: 4px;">Reiniciar Sistema</button>
+				</div>
+			</section>
+		</main>
 
 
         <footer class="footer" id="contacto-footer">
@@ -37,6 +91,6 @@
         </footer>
 		
 	</div>
-
+<script src="js/ejercicio.js"></script>
 </body>
 </html>

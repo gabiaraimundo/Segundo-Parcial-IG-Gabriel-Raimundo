@@ -3,44 +3,44 @@ let obras = [
     {
         titulo: 'Pulse Room',
         estreno: 2006,
-        poster: './img/lozano-hemmer-3.jpg'
+        foto: './img/lozano-hemmer-3.jpg'
     },
     {
         titulo: 'Vectorial Elevation',
         estreno: 1999,
-        poster: './img/vectorialelevation.jpg'
+        foto: './img/vectorialelevation.jpg'
     },
     {
         titulo: '33 Questions per Minute',
         estreno: 2000,
-        poster: './img/33questions.jpg'
+        foto: './img/33questions.jpg'
     },
     {
         titulo: 'Body Movies',
         estreno: 2001,
-        poster: './img/bodymovies.jpg'
+        foto: './img/bodymovies.jpg'
     },
     {
         titulo: 'Interactividad',
         estreno: 2005,
-        poster: './img/lozano-hemmer-1.jpg'
+        foto: './img/lozano-hemmer-1.jpg'
     },
     {
         titulo: 'Arte en espacio público',
         estreno: 2010,
-        poster: './img/lozano-hemmer-2.jpg'
+        foto: './img/lozano-hemmer-2.jpg'
     }
 ];
 
 // Capturo el elemento en el que mostrar las obras
 let contenedor = document.querySelector('#cards');
 
-// Recorro el array y voy concatenando el HTML tal como en la Clase 10
+// Recorro el array y voy armando el HTML 
 for (let i = 0; i < obras.length; i++) {
     
     // Armamos la tarjeta usando la estructura de tus LI tradicionales
     let tarjeta = '<li>';
-    tarjeta += '<div class="imagen-obra"><img src="' + obras[i].poster + '" alt="' + obras[i].titulo + '"></div>';
+    tarjeta += '<div class="imagen-obra"><img src="' + obras[i].foto + '" alt="' + obras[i].titulo + '"></div>';
     
     // Le agregamos un ID único a cada título y a cada párrafo del año para poder controlarlos después
     tarjeta += '<h4 id="titulo-' + i + '">' + obras[i].titulo + '</h4>';
